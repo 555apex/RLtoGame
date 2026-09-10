@@ -1,0 +1,7 @@
+# 源码与配置固定 LF；原始证据保留现有字节，避免改变记录中的 SHA-256。
+* text=auto eol=lf
+snake/reports/data/** -text
+*.png binary
+*.gif binary
+*.mp4 binary
+*.pt binary

@@ -1,0 +1,31 @@
+{
+  "split": "validation",
+  "wall_seconds": 0.032705799967516214,
+  "statistics_unit": "episode; fixed policies, no training seeds",
+  "policies": {
+    "heuristic": {
+      "episodes": 20,
+      "mean_food": 17.25,
+      "episode_food_std": 4.621175516889045,
+      "mean_length": 20.25,
+      "mean_occupancy": 0.2025,
+      "mean_steps": 136,
+      "mean_return": 16.113999999999994,
+      "collisions": 20,
+      "successes": 0,
+      "truncations": 0
+    },
+    "random": {
+      "episodes": 20,
+      "mean_food": 0.15,
+      "episode_food_std": 0.36634754853252327,
+      "mean_length": 3.15,
+      "mean_occupancy": 0.0315,
+      "mean_steps": 17,
+      "mean_return": -0.8669999999999999,
+      "collisions": 20,
+      "successes": 0,
+      "truncations": 0
+    }
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "created_utc": "2026-09-10T03:08:20.002834+00:00",
+  "status": "frozen_before_test",
+  "matrix": {
+    "experiment": "single_snake_controlled_v1",
+    "device": "cpu",
+    "selection": "maximum validation mean food; earliest step on ties",
+    "training_steps_per_run": 300000,
+    "total_training_steps": 1800000,
+    "evaluation": "20 fixed test episodes per best model, 3 shared initial networks, random and heuristic; 220 episodes total",
+    "initial_control": "same training seed produces identical initial tensors across algorithms; evaluate once per seed",
+    "test_use": "only after all six runs and model hash freeze; no tuning after test",
+    "runs": [
+      {
+        "algorithm": "dqn",
+        "seed": 0,
+        "path": "runs/dqn_seed0_stage2",
+        "reuse": true
+      },
+      {
+        "algorithm": "dqn",
+        "seed": 1,
+        "path": "runs/dqn_seed1_stage3",
+        "reuse": false
+      },
+      {
+        "algorithm": "dqn",
+        "seed": 2,
+        "path": "runs/dqn_seed2_stage3",
+        "reuse": false
+      },
+      {
+        "algorithm": "double_dqn",
+        "seed": 0,
+        "path": "runs/double_dqn_seed0_stage3",
+        "reuse": false
+      },
+      {
+        "algorithm": "double_dqn",
+        "seed": 1,
+        "path": "runs/double_dqn_seed1_stage3",
+        "reuse": false
+      },
+      {
+        "algorithm": "double_dqn",
+        "seed": 2,
+        "path": "runs/double_dqn_seed2_stage3",
+        "reuse": false
+      }
+    ]
+  },
+  "matrix_sha256": "3c76aceec5759a6698549b3c7cf65553d4704929233ffa0362f655c1c6f40fcf",
+  "protocol": {
+    "protocol": "single_snake_v1",
+    "board_size": 10,
+    "max_steps": 2000,
+    "initial_body": [
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        3
+      ]
+    ],
+    "initial_direction": "right",
+    "actions": [
+      "straight",
+      "left",
+      "right"
+    ],
+    "observation": "ordered_body_100_food_100_direction_up_right_down_left_4",
+    "rewards": {
+      "step_cost": -0.001,
+      "food": 1.0,
+      "collision": -1.0,
+      "full_board": 10.0
+    },
+    "splits": {
+      "train": [
+        0,
+        999
+      ],
+      "validation": [
+        1000,
+        1019
+      ],
+      "test": [
+        10000,
+        10019
+      ]
+    },
+    "policy_seed_base": 20260909
+  },
+  "demo_model_id": "double_dqn_seed1_best",
+  "test_seeds": [
+    10000,
+    10001,
+    10002,
+    10003,
+    10004,
+    10005,
+    10006,
+    10007,
+    10008,
+    10009,
+    10010,
+    10011,
+    10012,
+    10013,
+    10014,
+    10015,
+    10016,
+    10017,
+    10018,
+    10019
+  ],
+  "models": [
+    {
+      "id": "dqn_seed0_best",
+      "method": "dqn",
+      "training_seed": 0,
+      "variant": "best",
+      "path": "runs/dqn_seed0_stage2/checkpoints/best.pt",
+      "sha256": "d0dbe6b3811ee2da0c7e4387985f1487edc9c872ad1ace2a2db32adafa0056f9",
+      "tensor_sha256": "9bc39f9ff90edd83192d35841d63d22ca04f41276e3be29b9ec1d189eba455fb",
+      "step": 260000,
+      "validation_mean_food": 1.3,
+      "run": "runs/dqn_seed0_stage2",
+      "config_sha256": "a59b8c2adf9cf926cf786614cb53a198979a1fe62254cc2fd3fff69bad70038c"
+    },
+    {
+      "id": "dqn_seed1_best",
+      "method": "dqn",
+      "training_seed": 1,
+      "variant": "best",
+      "path": "runs/dqn_seed1_stage3/checkpoints/best.pt",
+      "sha256": "12dbdc088f068051b5132bc53d182bccc832ab5854bef95e445ae2228c3977cc",
+      "tensor_sha256": "45153b60c44194f1d7e7c513c6da367abab68d2dcd33095386637b6fd38780e0",
+      "step": 300000,
+      "validation_mean_food": 1.2,
+      "run": "runs/dqn_seed1_stage3",
+      "config_sha256": "a59b8c2adf9cf926cf786614cb53a198979a1fe62254cc2fd3fff69bad70038c"
+    },
+    {
+      "id": "dqn_seed2_best",
+      "method": "dqn",
+      "training_seed": 2,
+      "variant": "best",
+      "path": "runs/dqn_seed2_stage3/checkpoints/best.pt",
+      "sha256": "30de420917593b53bab31972eb7a390c7680f16faf328ef3e8f8862100bc8cce",
+      "tensor_sha256": "be714faf0f1e8cc2b9206b4539e88aeb7b108272b501a4810b07b3deefea9746",
+      "step": 280000,
+      "validation_mean_food": 1.25,
+      "run": "runs/dqn_seed2_stage3",
+      "config_sha256": "a59b8c2adf9cf926cf786614cb53a198979a1fe62254cc2fd3fff69bad70038c"
+    },
+    {
+      "id": "double_dqn_seed0_best",
+      "method": "double_dqn",
+      "training_seed": 0,
+      "variant": "best",
+      "path": "runs/double_dqn_seed0_stage3/checkpoints/best.pt",
+      "sha256": "50e06e66233451beee81a79ab7707df361e682ba2454a2836345cb1e7f277028",
+      "tensor_sha256": "ed5f4dcda517dd35007a4ef9b141df6004c8f97f205507a56afa76d6874828f9",
+      "step": 240000,
+      "validation_mean_food": 1.3,
+      "run": "runs/double_dqn_seed0_stage3",
+      "config_sha256": "b80e2b41733c445bcf5c7465f88f3cef9ed6b80aa358bf13ec79d670c599adee"
+    },
+    {
+      "id": "double_dqn_seed1_best",
+      "method": "double_dqn",
+      "training_seed": 1,
+      "variant": "best",
+      "path": "runs/double_dqn_seed1_stage3/checkpoints/best.pt",
+      "sha256": "fb9403affe76a53020e046ec5efd2cecc62cc3e4e735f0f3ac47fd9cf6400166",
+      "tensor_sha256": "c7c0c79dbfa6a12ae79e17c7f2cefcc12b3e0bf0013e24ba49ccce5e43b87931",
+      "step": 220000,
+      "validation_mean_food": 1.75,
+      "run": "runs/double_dqn_seed1_stage3",
+      "config_sha256": "b80e2b41733c445bcf5c7465f88f3cef9ed6b80aa358bf13ec79d670c599adee"
+    },
+    {
+      "id": "double_dqn_seed2_best",
+      "method": "double_dqn",
+      "training_seed": 2,
+      "variant": "best",
+      "path": "runs/double_dqn_seed2_stage3/checkpoints/best.pt",
+      "sha256": "147db6710aad681053901a36a3216cc9abc817c643ae53c9192fe5ee8a5604ce",
+      "tensor_sha256": "fa84c9ea97dd2f987a1295006d1433abc0c7f611412e315275067c9b08b1e068",
+      "step": 140000,
+      "validation_mean_food": 1.2,
+      "run": "runs/double_dqn_seed2_stage3",
+      "config_sha256": "b80e2b41733c445bcf5c7465f88f3cef9ed6b80aa358bf13ec79d670c599adee"
+    },
+    {
+      "id": "dqn_seed0_initial",
+      "method": "initial",
+      "training_seed": 0,
+      "variant": "initial",
+      "path": "runs/dqn_seed0_stage2/checkpoints/initial.pt",
+      "sha256": "c70c875a17746cd403d7d54c1e9e6983aa8ce14f996dc2b09da0521dcc69e00b",
+      "tensor_sha256": "49aada7111008bf2cd8e167b86ae79384846c1c91e68dc28983c87355b0b5d6f",
+      "step": 0,
+      "validation_mean_food": null,
+      "run": "runs/dqn_seed0_stage2",
+      "config_sha256": "a59b8c2adf9cf926cf786614cb53a198979a1fe62254cc2fd3fff69bad70038c"
+    },
+    {
+      "id": "dqn_seed1_initial",
+      "method": "initial",
+      "training_seed": 1,
+      "variant": "initial",
+      "path": "runs/dqn_seed1_stage3/checkpoints/initial.pt",
+      "sha256": "aa5ba2654b520f4407a56a7e0ec7f39908e18bc8dc537868710ce8bc27ab0c9a",
+      "tensor_sha256": "55df0b6ea4844f88a3e412bb5443ec7be6eafe6accb6c8c0e3bbf2da7a3b0920",
+      "step": 0,
+      "validation_mean_food": null,
+      "run": "runs/dqn_seed1_stage3",
+      "config_sha256": "a59b8c2adf9cf926cf786614cb53a198979a1fe62254cc2fd3fff69bad70038c"
+    },
+    {
+      "id": "dqn_seed2_initial",
+      "method": "initial",
+      "training_seed": 2,
+      "variant": "initial",
+      "path": "runs/dqn_seed2_stage3/checkpoints/initial.pt",
+      "sha256": "a00388b63433a0ae0be6d94c3e056369ba19bdf79ea1ccd4ea45fda67d744384",
+      "tensor_sha256": "cf26d94a5da96907f2954e5a4157dafd44186c25919ddd2b2edc125922bce813",
+      "step": 0,
+      "validation_mean_food": null,
+      "run": "runs/dqn_seed2_stage3",
+      "config_sha256": "a59b8c2adf9cf926cf786614cb53a198979a1fe62254cc2fd3fff69bad70038c"
+    }
+  ],
+  "baselines": [
+    "random",
+    "heuristic"
+  ],
+  "expected_test_episodes": 220,
+  "core_sha256": {
+    "agents/dqn.py": "e19a2a82f93a80f0f950b7f819ebeac5ab33f3cb67fd023c1f0a163c3893915b",
+    "agents/replay.py": "fce8073deead397f7ec309c045cdae0f0df98a4c0a234587101299e8fca065a1",
+    "agents/baselines.py": "a14fc0238245259d82ddca329258479facd7d21347bdbf58dc6bd11864e4f77b",
+    "agents/__init__.py": "ef0a3432ef22a015ae33399e1d50ba7279eeace4a15319a9cd0bd57b90ee82b8",
+    "envs/single_snake.py": "fa6baeec1d44e85322aea527016b1734cbbb7447f4993c3c43281d9b87c5bb0f",
+    "envs/__init__.py": "d9dc0c7a6a8394d7f65864e29e591c4ba6a6baa49b0b576da9d4b0e1a11febbd",
+    "training.py": "5c233b7014bad130883b9c51363c6c02960a874a2f4a8ae3073ddf73f030d9b9",
+    "experiment.py": "e950fde4ed7ef27cab2cba6c14e5284eb9aeb94571a4c75bf3f07c3cca6018ad",
+    "evaluate.py": "ca8956d1935063cd7e618f5b4664772f7f644d1a2f6f20b9a6bb853a0af91aeb",
+    "final_experiment.py": "ffb574d86cc0a06144e41f76df37129a0e848069a333056e0a7c405248ad7c0d",
+    "configs/single_snake.json": "25a7d96f715bf9972138ecbb11cd6449ed8f07acc5290fce42924cdb6eea768e",
+    "configs/dqn.json": "dae3137dd4741b3c828e4a98dabe3f38838b89b9bc3d7b903c0a648289bdd4cc",
+    "configs/double_dqn.json": "f765e845f688760818b8a74c11ca24ba2c86ef05b9abac7ad3c6e98a80ef83af"
+  },
+  "selection_uses_test": false,
+  "technical_failures": []
+}

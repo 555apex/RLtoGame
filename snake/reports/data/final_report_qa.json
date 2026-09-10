@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "training_steps": 1800000,
+  "training_runs": 6,
+  "validation_episodes": 3720,
+  "test_episodes": 220,
+  "checks": [
+    "budget and reward reconciliation",
+    "exact seed lists",
+    "model identities",
+    "frozen before test",
+    "archived source hashes",
+    "statistics recomputed from CSV"
+  ],
+  "freeze_sha256": "46478431f533317b28885ae534535399382b6b6b160ea0c94192a2e2cba6cb0f",
+  "episodes_sha256": "71ca7a26d03c62e65209fd69f804ce8958e6e2b35de5df5a63c5f299e19ca3fc"
+}

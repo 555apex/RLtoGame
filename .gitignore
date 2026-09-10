@@ -1,0 +1,15 @@
+# 本地环境、下载工具与大体积运行产物
+.tools/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.cache/
+**/*.pyc
+**/checkpoints/
+**/runs/
+**/reports/assets/*.gif
+**/reports/assets/*.mp4
+work/
+.env
+.env.*
+!.env.example

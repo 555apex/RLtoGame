@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "markdown_files": 20,
+  "local_links": 76,
+  "frozen_models": 9,
+  "completed_runs": 6,
+  "demo_actions_replayed": 37,
+  "demo_gif_frames": 38,
+  "demo_trace_sha256": "d5cc32aab1ac4522eb922ff0249ad4df333f9a413ebeb1c3b43720ff772e3f1f",
+  "test_used_for_tuning": false,
+  "desktop_student_acceptance": "pending"
+}

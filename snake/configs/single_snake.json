@@ -1,0 +1,12 @@
+{
+  "protocol": "single_snake_v1",
+  "board_size": 10,
+  "max_steps": 2000,
+  "initial_body": [[5, 5], [5, 4], [5, 3]],
+  "initial_direction": "right",
+  "actions": ["straight", "left", "right"],
+  "observation": "ordered_body_100_food_100_direction_up_right_down_left_4",
+  "rewards": {"step_cost": -0.001, "food": 1.0, "collision": -1.0, "full_board": 10.0},
+  "splits": {"train": [0, 999], "validation": [1000, 1019], "test": [10000, 10019]},
+  "policy_seed_base": 20260909
+}

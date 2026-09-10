@@ -1,0 +1,131 @@
+{
+  "run_id": "dqn_seed1_stage3",
+  "created_utc": "2026-09-09T15:20:48.414054+00:00",
+  "training_seed": 1,
+  "config": {
+    "algorithm": "dqn",
+    "hidden_sizes": [
+      128,
+      128
+    ],
+    "learning_rate": 0.001,
+    "gamma": 0.99,
+    "replay_capacity": 50000,
+    "batch_size": 64,
+    "learning_starts": 1000,
+    "train_frequency": 4,
+    "target_update_interval": 1000,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 100000,
+    "total_steps": 300000,
+    "validation_interval": 10000,
+    "checkpoint_interval": 50000,
+    "log_interval": 1000,
+    "max_grad_norm": 10.0,
+    "torch_threads": 1
+  },
+  "protocol": {
+    "protocol": "single_snake_v1",
+    "board_size": 10,
+    "max_steps": 2000,
+    "initial_body": [
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        3
+      ]
+    ],
+    "initial_direction": "right",
+    "actions": [
+      "straight",
+      "left",
+      "right"
+    ],
+    "observation": "ordered_body_100_food_100_direction_up_right_down_left_4",
+    "rewards": {
+      "step_cost": -0.001,
+      "food": 1.0,
+      "collision": -1.0,
+      "full_board": 10.0
+    },
+    "splits": {
+      "train": [
+        0,
+        999
+      ],
+      "validation": [
+        1000,
+        1019
+      ],
+      "test": [
+        10000,
+        10019
+      ]
+    },
+    "policy_seed_base": 20260909
+  },
+  "config_sha256": "a59b8c2adf9cf926cf786614cb53a198979a1fe62254cc2fd3fff69bad70038c",
+  "hardware": {
+    "device": "cpu",
+    "cpu_threads": 1,
+    "torch": "2.7.1+cu128",
+    "cuda_build": "12.8",
+    "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+    "logical_cpus": 16,
+    "system_ram_bytes": 51171491840,
+    "cudnn_deterministic": true,
+    "cross_device_bitwise_reproducibility": false
+  },
+  "resume": null,
+  "final_test_used": false,
+  "sources": {
+    "source_sha256": "20ad9d71543c5964d9b1cdbdd6f9226f173950c75d963c580f9ce843bfd07a92",
+    "files": {
+      "__init__.py": "2b7a881cc9f9d8ac34c714f727f4ebd58d7031580f3c80c47493f0f787a6fbd9",
+      "agents/__init__.py": "ef0a3432ef22a015ae33399e1d50ba7279eeace4a15319a9cd0bd57b90ee82b8",
+      "agents/baselines.py": "a14fc0238245259d82ddca329258479facd7d21347bdbf58dc6bd11864e4f77b",
+      "agents/dqn.py": "e19a2a82f93a80f0f950b7f819ebeac5ab33f3cb67fd023c1f0a163c3893915b",
+      "agents/replay.py": "fce8073deead397f7ec309c045cdae0f0df98a4c0a234587101299e8fca065a1",
+      "benchmark.py": "8ffd8d77915b62f58ddfa3ec39d386ef29cc7da08d0cf102cea56a15bf4db83d",
+      "benchmark_dqn.py": "e8e6d8a19a12e849d4cc78b966d3bba76e0e32f4afd25892e6f758ee82b2f4fc",
+      "build_dqn_report.py": "e56d6de6aec3b8be7eb4b2979441695e5b83789d9f4f30cb5b93216482e185c4",
+      "build_report.py": "57cef0f444bfefc2b097e626dc24e47768398b3e579d41bf7ca796ee706806ba",
+      "checks/test_baselines.py": "986fe8f5bb19de74261b9b48a8d00a2f0ba1c8879f6fb08f05edea39d1c4f592",
+      "checks/test_demo.py": "fb328d0c63f050e78e68e113d1e7b521818afe2beb506c0bfc6578886eba96cc",
+      "checks/test_double_dqn.py": "096189b872a0f911ac99117a58d2301de23ac1c79b1ae8285a3959a4e2a7f9e7",
+      "checks/test_dqn.py": "3693dc664907904819ef3e7ee3968ebf47118ca2cc5c1f06dee297a1f78fce6c",
+      "checks/test_environment.py": "e994b6aaf2fa9331ecc343f5d35e30ba9e5b201885559f429de3b5acb358c2ba",
+      "demo.py": "c5297c8615a2bf13b195d0ecc1c4fc3d2d1c422538c7748b68b61d3095a26d61",
+      "diagnose_policy.py": "4a86ae85b4d41ec3bece21d4b84f7fc41b194580266dafed80711505371562ff",
+      "envs/__init__.py": "d9dc0c7a6a8394d7f65864e29e591c4ba6a6baa49b0b576da9d4b0e1a11febbd",
+      "envs/rendering.py": "a21dd8f5014fa9d0528964bca19fc06891894071bc94628d323666598cacf32e",
+      "envs/single_snake.py": "fa6baeec1d44e85322aea527016b1734cbbb7447f4993c3c43281d9b87c5bb0f",
+      "evaluate.py": "ca8956d1935063cd7e618f5b4664772f7f644d1a2f6f20b9a6bb853a0af91aeb",
+      "experiment.py": "e950fde4ed7ef27cab2cba6c14e5284eb9aeb94571a4c75bf3f07c3cca6018ad",
+      "learning/dqn_math.py": "e702b38f314ce812bb02ac705dcdfacc81a2ee9cb2bd4c6e89508f890ff6008f",
+      "run_experiments.py": "027f99c8c38033a3132e7800234d89bcb888d978d580ce125303fac2e100203a",
+      "train.py": "dfb9e3c5259ba3a6d1fc22a3638919e934bbbe6f89a6686fb3840a97e2e8cbf6",
+      "training.py": "5c233b7014bad130883b9c51363c6c02960a874a2f4a8ae3073ddf73f030d9b9"
+    },
+    "config_sha256": "25a7d96f715bf9972138ecbb11cd6449ed8f07acc5290fce42924cdb6eea768e",
+    "python": "3.13.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+    "dependencies": {
+      "gymnasium": "1.3.0",
+      "numpy": "2.5.3",
+      "pygame-ce": "2.5.8",
+      "matplotlib": "3.11.1",
+      "pillow": "12.3.0",
+      "pytest": "9.1.1"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+# 首次安装入口；已验证的精确版本见 requirements-lock.txt。
+gymnasium>=1.2,<2
+numpy>=2,<3
+pygame-ce>=2.5,<3
+matplotlib>=3.10,<4
+pillow>=11,<13
+pytest>=8,<10

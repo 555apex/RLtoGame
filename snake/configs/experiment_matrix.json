@@ -1,0 +1,18 @@
+{
+  "experiment": "single_snake_controlled_v1",
+  "device": "cpu",
+  "selection": "maximum validation mean food; earliest step on ties",
+  "training_steps_per_run": 300000,
+  "total_training_steps": 1800000,
+  "evaluation": "20 fixed test episodes per best model, 3 shared initial networks, random and heuristic; 220 episodes total",
+  "initial_control": "same training seed produces identical initial tensors across algorithms; evaluate once per seed",
+  "test_use": "only after all six runs and model hash freeze; no tuning after test",
+  "runs": [
+    {"algorithm": "dqn", "seed": 0, "path": "runs/dqn_seed0_stage2", "reuse": true},
+    {"algorithm": "dqn", "seed": 1, "path": "runs/dqn_seed1_stage3", "reuse": false},
+    {"algorithm": "dqn", "seed": 2, "path": "runs/dqn_seed2_stage3", "reuse": false},
+    {"algorithm": "double_dqn", "seed": 0, "path": "runs/double_dqn_seed0_stage3", "reuse": false},
+    {"algorithm": "double_dqn", "seed": 1, "path": "runs/double_dqn_seed1_stage3", "reuse": false},
+    {"algorithm": "double_dqn", "seed": 2, "path": "runs/double_dqn_seed2_stage3", "reuse": false}
+  ]
+}

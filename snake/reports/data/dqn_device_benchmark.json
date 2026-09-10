@@ -1,0 +1,75 @@
+{
+  "torch": "2.7.1+cu128",
+  "cuda_build": "12.8",
+  "cuda_available": true,
+  "config": {
+    "algorithm": "dqn",
+    "hidden_sizes": [
+      128,
+      128
+    ],
+    "learning_rate": 0.001,
+    "gamma": 0.99,
+    "replay_capacity": 50000,
+    "batch_size": 64,
+    "learning_starts": 1000,
+    "train_frequency": 4,
+    "target_update_interval": 1000,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 100000,
+    "total_steps": 300000,
+    "validation_interval": 10000,
+    "checkpoint_interval": 50000,
+    "log_interval": 1000,
+    "max_grad_norm": 10.0,
+    "torch_threads": 1
+  },
+  "trials": [
+    {
+      "device": "cpu",
+      "warmup_steps": 2000,
+      "measured_steps": 6000,
+      "updates": 1500,
+      "seconds": 1.7569946000003256,
+      "steps_per_second": 3414.922276937498,
+      "last_update": {
+        "loss": 0.01585574261844158,
+        "grad_norm_before_clip": 0.21883274614810944,
+        "mean_q": 0.15470249950885773,
+        "mean_abs_td_error": 0.10021322220563889
+      },
+      "peak_cuda_allocated_bytes": 0
+    },
+    {
+      "device": "cuda",
+      "warmup_steps": 2000,
+      "measured_steps": 6000,
+      "updates": 1500,
+      "seconds": 3.2718146999832243,
+      "steps_per_second": 1833.8446856512883,
+      "last_update": {
+        "loss": 0.016813121736049652,
+        "grad_norm_before_clip": 0.08853018283843994,
+        "mean_q": 0.16093787550926208,
+        "mean_abs_td_error": 0.10419449210166931
+      },
+      "peak_cuda_allocated_bytes": 19126784
+    }
+  ],
+  "scope": "2000-step warmup then DQN interaction + replay + optimizer; no validation/checkpoint I/O",
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "cuda_arch_list": [
+    "sm_50",
+    "sm_60",
+    "sm_61",
+    "sm_70",
+    "sm_75",
+    "sm_80",
+    "sm_86",
+    "sm_90",
+    "sm_100",
+    "sm_120"
+  ],
+  "selected_device": "cpu"
+}

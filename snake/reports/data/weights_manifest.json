@@ -1,0 +1,84 @@
+{
+  "publication": "local only; user approval pending",
+  "runs": [
+    {
+      "algorithm": "dqn",
+      "training_seed": 0,
+      "directory": "runs/dqn_seed0_stage2",
+      "files": {
+        "best.pt": "d0dbe6b3811ee2da0c7e4387985f1487edc9c872ad1ace2a2db32adafa0056f9",
+        "initial.pt": "c70c875a17746cd403d7d54c1e9e6983aa8ce14f996dc2b09da0521dcc69e00b",
+        "last.pt": "ae76ac3ef71bacf348bf6290746697685dbb1750a82bd9b77c8feeaa4040cf59",
+        "resume.pt": "0b115436f24e5954517983583a99e1171ca0608fa2c3006c6c1fba4ca09e2e03"
+      },
+      "config_sha256": "a59b8c2adf9cf926cf786614cb53a198979a1fe62254cc2fd3fff69bad70038c",
+      "source_sha256": "96141f7d9ebea738c41b88a1065e95cc0310f2fcd3bfa91f656c30383924a182"
+    },
+    {
+      "algorithm": "dqn",
+      "training_seed": 1,
+      "directory": "runs/dqn_seed1_stage3",
+      "files": {
+        "best.pt": "12dbdc088f068051b5132bc53d182bccc832ab5854bef95e445ae2228c3977cc",
+        "initial.pt": "aa5ba2654b520f4407a56a7e0ec7f39908e18bc8dc537868710ce8bc27ab0c9a",
+        "last.pt": "efa50fb18ee3c75906c843d5a3d8a443c74f24a4e6ef84ee0d95a5a2a50af08f",
+        "resume.pt": "0aca4df04420b694e97e8259258903cfa4e2de663282b62873ecd6ee373a7185"
+      },
+      "config_sha256": "a59b8c2adf9cf926cf786614cb53a198979a1fe62254cc2fd3fff69bad70038c",
+      "source_sha256": "20ad9d71543c5964d9b1cdbdd6f9226f173950c75d963c580f9ce843bfd07a92"
+    },
+    {
+      "algorithm": "dqn",
+      "training_seed": 2,
+      "directory": "runs/dqn_seed2_stage3",
+      "files": {
+        "best.pt": "30de420917593b53bab31972eb7a390c7680f16faf328ef3e8f8862100bc8cce",
+        "initial.pt": "a00388b63433a0ae0be6d94c3e056369ba19bdf79ea1ccd4ea45fda67d744384",
+        "last.pt": "eac3ce53957332b3df2a1d7d910af0485d1e4c06b0d1996a917d420991bc8ce7",
+        "resume.pt": "f6d6f288b2b97ef761082f1fa810fb84dad51efdfa4dba49d746c27000c95d72"
+      },
+      "config_sha256": "a59b8c2adf9cf926cf786614cb53a198979a1fe62254cc2fd3fff69bad70038c",
+      "source_sha256": "d7a8c48212e9fd70c50e8032b627219cc10f4e119a9189c6e1f19f0c476729fd"
+    },
+    {
+      "algorithm": "double_dqn",
+      "training_seed": 0,
+      "directory": "runs/double_dqn_seed0_stage3",
+      "files": {
+        "best.pt": "50e06e66233451beee81a79ab7707df361e682ba2454a2836345cb1e7f277028",
+        "initial.pt": "abb585eb8a40194c01955a1f3bed7c73212ff20c78d8b9cf5910f254ad2a4a17",
+        "last.pt": "e41c1f8d60bf7d7970586d155c84757bad2e0d4d4a51e6f30bd3d832b1b11935",
+        "resume.pt": "a8b747f7f82c13a159d468b8d240c388dcaf1a380f64c160d07b7d048c69bf55"
+      },
+      "config_sha256": "b80e2b41733c445bcf5c7465f88f3cef9ed6b80aa358bf13ec79d670c599adee",
+      "source_sha256": "d7a8c48212e9fd70c50e8032b627219cc10f4e119a9189c6e1f19f0c476729fd"
+    },
+    {
+      "algorithm": "double_dqn",
+      "training_seed": 1,
+      "directory": "runs/double_dqn_seed1_stage3",
+      "files": {
+        "best.pt": "fb9403affe76a53020e046ec5efd2cecc62cc3e4e735f0f3ac47fd9cf6400166",
+        "initial.pt": "6fedfc40a38cc1a375ae030518d667bd6d9c737ffa2516941d02d26a35d63180",
+        "last.pt": "38f67427f99d7de3909b838d496d40546c672941d687c2f0c0c73bde752e4553",
+        "resume.pt": "ffd8adb5f6e7ce94afd00052905c244649f7a67018c4deb92181e93c2bd92f14"
+      },
+      "config_sha256": "b80e2b41733c445bcf5c7465f88f3cef9ed6b80aa358bf13ec79d670c599adee",
+      "source_sha256": "2e71388f6fb7c1cdeb82623d9d6c453dfa432862ce3baf2fd9b9be603408d5ca"
+    },
+    {
+      "algorithm": "double_dqn",
+      "training_seed": 2,
+      "directory": "runs/double_dqn_seed2_stage3",
+      "files": {
+        "best.pt": "147db6710aad681053901a36a3216cc9abc817c643ae53c9192fe5ee8a5604ce",
+        "initial.pt": "9a84a2fa3f0fb2ee0af06a9de329111036e563ecc2cd4e86fc4b93c664809066",
+        "last.pt": "3f6af4cca1db98392b0ed11f9921b123d3c61ae611127dfa4819aa25114b6ae1",
+        "resume.pt": "1733ee5bd51b37275ca2ffb0f70e7cd5bb53c2fbea87211d99a973ccf356bb56"
+      },
+      "config_sha256": "b80e2b41733c445bcf5c7465f88f3cef9ed6b80aa358bf13ec79d670c599adee",
+      "source_sha256": "82a3b998e5a899f2fcb4053dfab80534815640a6623920d1a6e6426316dea8b1"
+    }
+  ],
+  "freeze_sha256": "46478431f533317b28885ae534535399382b6b6b160ea0c94192a2e2cba6cb0f"
+}

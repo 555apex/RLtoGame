@@ -1,0 +1,193 @@
+{
+  "run_id": "dqn_seed0_best_validation",
+  "created_utc": "2026-09-09T15:01:18.863402+00:00",
+  "split": "validation",
+  "env_seeds": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019
+  ],
+  "policies": [
+    "dqn"
+  ],
+  "protocol": {
+    "protocol": "single_snake_v1",
+    "board_size": 10,
+    "max_steps": 2000,
+    "initial_body": [
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        3
+      ]
+    ],
+    "initial_direction": "right",
+    "actions": [
+      "straight",
+      "left",
+      "right"
+    ],
+    "observation": "ordered_body_100_food_100_direction_up_right_down_left_4",
+    "rewards": {
+      "step_cost": -0.001,
+      "food": 1.0,
+      "collision": -1.0,
+      "full_board": 10.0
+    },
+    "splits": {
+      "train": [
+        0,
+        999
+      ],
+      "validation": [
+        1000,
+        1019
+      ],
+      "test": [
+        10000,
+        10019
+      ]
+    },
+    "policy_seed_base": 20260909
+  },
+  "checkpoint": {
+    "path": "C:\\Users\\ruixuanhu\\Desktop\\RLtoGame\\snake\\runs\\dqn_seed0_stage2\\checkpoints\\best.pt",
+    "sha256": "d0dbe6b3811ee2da0c7e4387985f1487edc9c872ad1ace2a2db32adafa0056f9",
+    "metadata": {
+      "kind": "snake_dqn_policy_v1",
+      "config": {
+        "algorithm": "dqn",
+        "hidden_sizes": [
+          128,
+          128
+        ],
+        "learning_rate": 0.001,
+        "gamma": 0.99,
+        "replay_capacity": 50000,
+        "batch_size": 64,
+        "learning_starts": 1000,
+        "train_frequency": 4,
+        "target_update_interval": 1000,
+        "epsilon_start": 1.0,
+        "epsilon_end": 0.05,
+        "epsilon_decay_steps": 100000,
+        "total_steps": 300000,
+        "validation_interval": 10000,
+        "checkpoint_interval": 50000,
+        "log_interval": 1000,
+        "max_grad_norm": 10.0,
+        "torch_threads": 1
+      },
+      "protocol": {
+        "protocol": "single_snake_v1",
+        "board_size": 10,
+        "max_steps": 2000,
+        "initial_body": [
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "initial_direction": "right",
+        "actions": [
+          "straight",
+          "left",
+          "right"
+        ],
+        "observation": "ordered_body_100_food_100_direction_up_right_down_left_4",
+        "rewards": {
+          "step_cost": -0.001,
+          "food": 1.0,
+          "collision": -1.0,
+          "full_board": 10.0
+        },
+        "splits": {
+          "train": [
+            0,
+            999
+          ],
+          "validation": [
+            1000,
+            1019
+          ],
+          "test": [
+            10000,
+            10019
+          ]
+        },
+        "policy_seed_base": 20260909
+      },
+      "training_seed": 0,
+      "step": 260000
+    },
+    "device": "cpu"
+  },
+  "source_sha256": "2c228021aa51f49dbbdb7a52580e3a4036ada19c12d0ed85674e11c7877eb5c1",
+  "files": {
+    "__init__.py": "2b7a881cc9f9d8ac34c714f727f4ebd58d7031580f3c80c47493f0f787a6fbd9",
+    "agents/__init__.py": "ef0a3432ef22a015ae33399e1d50ba7279eeace4a15319a9cd0bd57b90ee82b8",
+    "agents/baselines.py": "a14fc0238245259d82ddca329258479facd7d21347bdbf58dc6bd11864e4f77b",
+    "agents/dqn.py": "dae66be2a7907c9e6a9391e59d5582fa271851f89114f25b4e6c30e029bd2f33",
+    "agents/replay.py": "fce8073deead397f7ec309c045cdae0f0df98a4c0a234587101299e8fca065a1",
+    "benchmark.py": "8ffd8d77915b62f58ddfa3ec39d386ef29cc7da08d0cf102cea56a15bf4db83d",
+    "benchmark_dqn.py": "e8e6d8a19a12e849d4cc78b966d3bba76e0e32f4afd25892e6f758ee82b2f4fc",
+    "build_report.py": "57cef0f444bfefc2b097e626dc24e47768398b3e579d41bf7ca796ee706806ba",
+    "checks/test_baselines.py": "986fe8f5bb19de74261b9b48a8d00a2f0ba1c8879f6fb08f05edea39d1c4f592",
+    "checks/test_demo.py": "fb328d0c63f050e78e68e113d1e7b521818afe2beb506c0bfc6578886eba96cc",
+    "checks/test_dqn.py": "6c7c06b33161b7d740a95c3999e75b985069aa6517ab84cd5051e60f0bf581dc",
+    "checks/test_environment.py": "e994b6aaf2fa9331ecc343f5d35e30ba9e5b201885559f429de3b5acb358c2ba",
+    "demo.py": "cab6ba576e5398d32bd9bdd4f91f47d93bde2b22410af40ba2e586c47923ab8f",
+    "envs/__init__.py": "d9dc0c7a6a8394d7f65864e29e591c4ba6a6baa49b0b576da9d4b0e1a11febbd",
+    "envs/rendering.py": "a21dd8f5014fa9d0528964bca19fc06891894071bc94628d323666598cacf32e",
+    "envs/single_snake.py": "fa6baeec1d44e85322aea527016b1734cbbb7447f4993c3c43281d9b87c5bb0f",
+    "evaluate.py": "03097b7cb2e2e9a00a44f97b611f7919bcd9a60a94b91daab98309e113177228",
+    "experiment.py": "e950fde4ed7ef27cab2cba6c14e5284eb9aeb94571a4c75bf3f07c3cca6018ad",
+    "learning/dqn_math.py": "e702b38f314ce812bb02ac705dcdfacc81a2ee9cb2bd4c6e89508f890ff6008f",
+    "train.py": "9c0b24d3b8c06fd6f7a070beadc027ece6fd4c2fc3c8957b2171d533f17e4c20",
+    "training.py": "89fd37cbde025fd6d944e0138604699cd94f3deb8f594b73ef5c2119aae6c33d"
+  },
+  "config_sha256": "25a7d96f715bf9972138ecbb11cd6449ed8f07acc5290fce42924cdb6eea768e",
+  "python": "3.13.6",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+  "dependencies": {
+    "gymnasium": "1.3.0",
+    "numpy": "2.5.3",
+    "pygame-ce": "2.5.8",
+    "matplotlib": "3.11.1",
+    "pillow": "12.3.0",
+    "pytest": "9.1.1"
+  }
+}

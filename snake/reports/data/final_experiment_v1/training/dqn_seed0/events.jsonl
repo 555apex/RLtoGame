@@ -1,0 +1,8 @@
+{"event": "start", "step": 0, "parent": null}
+{"event": "checkpoint", "step": 50000}
+{"event": "checkpoint", "step": 100000}
+{"event": "checkpoint", "step": 150000}
+{"event": "checkpoint", "step": 200000}
+{"event": "checkpoint", "step": 250000}
+{"event": "checkpoint", "step": 300000}
+{"event": "completed", "step": 300000}

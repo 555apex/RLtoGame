@@ -1,0 +1,10 @@
+{
+  "training_steps": 300000,
+  "episodes": 5833,
+  "validation_rows": 620,
+  "source_hashes_verified": true,
+  "seed_splits_verified": true,
+  "return_components_verified": true,
+  "training_step_accounting_verified": true,
+  "loop_period_verified_until_episode_end": 24
+}

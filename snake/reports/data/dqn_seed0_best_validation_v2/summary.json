@@ -1,0 +1,19 @@
+{
+  "split": "validation",
+  "wall_seconds": 0.44949889997951686,
+  "statistics_unit": "episode; one frozen trained model, training seed in manifest",
+  "policies": {
+    "dqn": {
+      "episodes": 20,
+      "mean_food": 1.3,
+      "episode_food_std": 1.1285761872936695,
+      "mean_length": 4.3,
+      "mean_occupancy": 0.043000000000000003,
+      "mean_steps": 822.4,
+      "mean_return": -0.12239999999996666,
+      "collisions": 12,
+      "successes": 0,
+      "truncations": 8
+    }
+  }
+}
